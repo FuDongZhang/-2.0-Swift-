@@ -19,6 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-   
+    // 暂时测试用的，用swift过一遍
 }
 
