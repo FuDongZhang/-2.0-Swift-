@@ -1,17 +1,18 @@
 //
-//  BasicController.swift
+//  IHQRCodeController.swift
 //  InstalmenHelpSwift
 //
-//  Created by XQT-zfd on 2017/8/14.
+//  Created by XQT-zfd on 2017/8/15.
 //  Copyright © 2017年 XQT-zfd. All rights reserved.
-//  'ViewController的基类'
+//  '二维码'
 
 import UIKit
 
-class BasicController: UIViewController {
+class IHQRCodeController: BasicController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+
 }

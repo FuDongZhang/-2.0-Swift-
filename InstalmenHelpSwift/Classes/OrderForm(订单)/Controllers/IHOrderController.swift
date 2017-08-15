@@ -1,17 +1,19 @@
 //
-//  BasicController.swift
+//  IHOrderController.swift
 //  InstalmenHelpSwift
 //
-//  Created by XQT-zfd on 2017/8/14.
+//  Created by XQT-zfd on 2017/8/15.
 //  Copyright © 2017年 XQT-zfd. All rights reserved.
-//  'ViewController的基类'
+//  '订单'
 
 import UIKit
 
-class BasicController: UIViewController {
+class IHOrderController: BasicController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+
+
 }
