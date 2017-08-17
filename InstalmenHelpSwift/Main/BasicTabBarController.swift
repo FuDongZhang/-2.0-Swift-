@@ -22,7 +22,7 @@ extension BasicTabBarController{
     func addAllChildViewController() {
         
         addChildController(childController: IHHomeController(), title:"首页", image: "normal_loan", selectedImage: "select_loan")
-        addChildController(childController: IHQRCodeController(), title:"二维码", image: "normal_industry", selectedImage: "normal_industry")
+        addChildController(childController: IHQRCodeController(), title:"二维码", image: "QRCode", selectedImage: "QRCode")
         addChildController(childController: IHOrderController(), title:"订单", image: "normal_order", selectedImage: "select_order")
     }
     
@@ -33,7 +33,7 @@ extension BasicTabBarController{
         childController.tabBarItem.selectedImage = UIImage.init(named: selectedImage)?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         childController.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -2)
         
-        childController.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.purple], for: UIControlState.selected)
+        childController.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: defaultPurple_Color], for: UIControlState.selected)
         let childNavigation = BasicNavigationController.init(rootViewController: childController)
         
         addChildViewController(childNavigation)

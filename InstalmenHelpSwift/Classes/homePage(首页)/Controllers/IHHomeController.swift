@@ -25,29 +25,42 @@ class IHHomeController: BasicController ,UITableViewDelegate, UITableViewDataSou
         tableView!.dataSource = self
         tableView!.delegate = self
         self.view.addSubview(tableView!)
+        tableView!.register(IHHomeCell.classForCoder(), forCellReuseIdentifier: "IHHomeCellId")
     }
 }
 
 extension IHHomeController{
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return indexPath.section == 0 ? 150 : indexPath.row == 1 ? 210 : 160
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellId : String = "cellId"
-        var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
-        if cell == nil {
+        if indexPath.section == 0 {
             
-            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: cellId)
+            let cell:IHHomeCell = tableView.dequeueReusableCell(withIdentifier: "IHHomeCellId", for: indexPath) as! IHHomeCell
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            return cell
+        }else{
+            
+            let cellId = "cellId"
+            var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
+            if cell == nil {
+                
+                cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: cellId)
+            }
+            cell?.textLabel?.text = "123456789";
+            return cell!
         }
-        cell?.textLabel?.text = "123456789";
-        return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

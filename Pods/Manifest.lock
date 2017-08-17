@@ -1,0 +1,55 @@
+PODS:
+  - Alamofire (4.5.0)
+  - Appz (2.1.1)
+  - AsyncSwift (2.0.1)
+  - Hue (2.0.1)
+  - IQKeyboardManagerSwift (4.0.11)
+  - Just (0.5.7)
+  - Kingfisher (3.2.4)
+  - LTMorphingLabel (0.5.0)
+  - NVActivityIndicatorView (3.7.0):
+    - NVActivityIndicatorView/Presenter (= 3.7.0)
+  - NVActivityIndicatorView/Presenter (3.7.0)
+  - RAMAnimatedTabBarController (2.2.1)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
+  - SnapKit (3.2.0)
+  - SwiftyJSON (3.1.4)
+  - Validator (2.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - Appz
+  - AsyncSwift
+  - Hue (~> 2.0)
+  - IQKeyboardManagerSwift (~> 4.0.0)
+  - Just (~> 0.5.7)
+  - Kingfisher (~> 3.2)
+  - LTMorphingLabel
+  - NVActivityIndicatorView
+  - RAMAnimatedTabBarController (~> 2.0)
+  - SDWebImage
+  - SnapKit (~> 3.2.0)
+  - SwiftyJSON (~> 3.1.0)
+  - Validator (~> 2.1)
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Appz: bacae2b1ba3ea1e663056371488280a878eb7131
+  AsyncSwift: 632138e42ead868b53c745fcde9bf733ce1527ad
+  Hue: 354caec055fdc9d38b5ef33ca2e7224721843baf
+  IQKeyboardManagerSwift: 10f0a6b8ea2904c8943c0e1a116c99f5b8ad83af
+  Just: d19e769d86b965e39ae58cb3c0cbad07706634a8
+  Kingfisher: 8d80f39da403cd9c9ee11984e1655f4d6a566cdb
+  LTMorphingLabel: bc170be74b219b7dae0e5543a44676d16da70ff7
+  NVActivityIndicatorView: d3738df7e2e476aca0ba6bf32a8c9fbcfc33d64b
+  RAMAnimatedTabBarController: 42c2ed8b5ff35db372cbe56a0a02dbbe3999668b
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Validator: b1793fbfd0046097551d0edd18e2c30792d69ef5
+
+PODFILE CHECKSUM: 6a8a8d6642ee198d79d7e61e56e1be9ffaaef12a
+
+COCOAPODS: 1.2.1

@@ -10,15 +10,29 @@ import UIKit
 
 class IHHomeSecondCell: UITableViewCell {
 
+    var bgView:UIView?
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        createUI()
+    }
+    
+    func createUI() {
+        
+        bgView = UIView.init(frame: CGRect(x: 15, y: 15, width: SCREEN_WIDTH - 30, height: 200))
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
