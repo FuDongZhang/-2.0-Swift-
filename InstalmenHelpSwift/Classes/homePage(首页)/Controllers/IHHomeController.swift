@@ -25,7 +25,8 @@ class IHHomeController: BasicController ,UITableViewDelegate, UITableViewDataSou
         tableView!.dataSource = self
         tableView!.delegate = self
         self.view.addSubview(tableView!)
-        tableView!.register(IHHomeCell.classForCoder(), forCellReuseIdentifier: "IHHomeCellId")
+        tableView?.register(IHHomeCell.classForCoder(), forCellReuseIdentifier: "IHHomeCellId")
+        tableView?.register(IHHomeSecondCell.classForCoder(), forCellReuseIdentifier: "IHHomeSecondCell")
     }
 }
 
@@ -40,7 +41,7 @@ extension IHHomeController{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.section == 0 ? 150 : indexPath.row == 1 ? 210 : 160
+        return indexPath.section == 0 ? 100 : indexPath.row == 1 ? 210 : 160
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,6 +50,10 @@ extension IHHomeController{
             
             let cell:IHHomeCell = tableView.dequeueReusableCell(withIdentifier: "IHHomeCellId", for: indexPath) as! IHHomeCell
             cell.selectionStyle = UITableViewCellSelectionStyle.none
+            return cell
+        }else if indexPath.section == 1 {
+         
+            let cell:IHHomeSecondCell = tableView.dequeueReusableCell(withIdentifier: "IHHomeSecondCell", for: indexPath) as! IHHomeSecondCell 
             return cell
         }else{
             

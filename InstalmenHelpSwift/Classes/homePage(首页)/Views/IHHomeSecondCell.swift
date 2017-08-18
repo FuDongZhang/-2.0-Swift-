@@ -20,7 +20,35 @@ class IHHomeSecondCell: UITableViewCell {
     
     func createUI() {
         
-        bgView = UIView.init(frame: CGRect(x: 15, y: 15, width: SCREEN_WIDTH - 30, height: 200))
+        bgView = UIView()
+        self.contentView.addSubview(bgView!)
+        bgView?.backgroundColor = UIColor.red
+        bgView?.layer.masksToBounds = true
+        bgView?.layer.cornerRadius = 5.0
+        bgView?.snp.makeConstraints({ (make) in
+          
+            make.edges.equalTo(self.contentView).inset(UIEdgeInsetsMake(0, 15, 0, 15))
+        })
+        
+        var button:UIButton!
+        let space = bgView!.frame.size.width / 3 - 10
+        
+        
+        for i in 1...6{
+            
+            let row = i % 2  /*行*/
+            let line = i / 2 /*列*/
+            
+            button = UIButton()
+            bgView?.addSubview(button)
+            button.backgroundColor = defaultPurple_Color
+            button.snp.makeConstraints({ (make) in
+                
+                make.left.equalTo(5.0 + CGFloat((line - 1)) * space)
+                make.top.equalTo(5 + 85 * row)
+                make.width.height.equalTo(80)
+            })
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

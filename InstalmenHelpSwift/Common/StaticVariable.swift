@@ -7,3 +7,6 @@
 //
 
 import Foundation
+
+
+let bKeyboardDissmissTime = 0.25
